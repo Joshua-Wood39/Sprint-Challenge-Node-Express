@@ -1,6 +1,6 @@
 const express = require('express');
-
-
+const proRouter = require('./data/helpers/project-router');
+const actRouter = require('./data/helpers/action-router');
 
 
 const server = express();
@@ -13,7 +13,7 @@ server.get('/', (req,res) => {
     `)
 })
 
-
-
+server.use('/api/projects', proRouter);
+server.use('/api/actions', actRouter)
 
 module.exports = server;

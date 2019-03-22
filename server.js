@@ -1,10 +1,11 @@
 const express = require('express');
 const proRouter = require('./data/helpers/project-router');
 const actRouter = require('./data/helpers/action-router');
-
+const cors = require('cors');
 
 const server = express();
 server.use(express.json());
+server.use(cors());
 
 server.get('/', (req,res) => {
     res.send(`

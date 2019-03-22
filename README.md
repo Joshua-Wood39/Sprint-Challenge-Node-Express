@@ -24,15 +24,27 @@ In this challenge, create a web API around the following resources: `Projects` a
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Mention two parts of Express that you learned about this week.
+- [*] Mention two parts of Express that you learned about this week.
 
-- [ ] Describe Middleware?
+    We used both the express.json() and the express.Router(). Express.json helps with the put and delete functionality, and express.router allows you to break your app into route-able components (using a DRY method of representing the route).
 
-- [ ] Describe a Resource?
+- [*] Describe Middleware?
 
-- [ ] What can the API return to help clients know if a request was successful?
+    Middleware are functions that intercepts an action. From there, it can allow the data to continue, stop the data, or modify the data before sending it forward (using next()).
 
-- [ ] How can we partition our application into sub-applications?
+- [*] Describe a Resource?
+
+    Everything is a resource. Each resource is accessible via a unique URI and can have multiple representations. They are managed using http methods.
+
+- [*] What can the API return to help clients know if a request was successful?
+
+    Responses in the 200-299 range - depending on the situation.
+
+- [*] How can we partition our application into sub-applications?
+
+    Express.Router is an excellent tool. But the practice of grouping 'like' elements is key. If your description of your app ever uses the word 'and', odds are, you can put whatever is on either side of that 'and' into separate components.
+
+
 
 ## Project Setup
 
